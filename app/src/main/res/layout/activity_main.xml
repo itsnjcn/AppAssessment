@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="415dp"
+        android:layout_height="734dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/graident_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="354dp"
+        android:layout_height="107dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="Genshin Impact Calculator"
+        android:textColor="#FCE38A"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="336dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="123dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Combine different elements to produce an output."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="311dp"
+        android:layout_height="356dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="224dp"
+        android:background="@drawable/rectangle_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="622dp"
+        android:background="@drawable/roundcorners"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="279dp"
+        android:background="@drawable/rectangle_shapealt"
+        android:hint="Select Element"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="401dp"
+        android:background="@drawable/rectangle_shapealt"
+        android:hint="Select Element"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
