@@ -19,12 +19,13 @@ class ElementAdapter(context: Context, elementList: List<Element>) : ArrayAdapte
 
     private fun initView(position: Int, convertView: View?, parent: ViewGroup): View {
 
-        val country = getItem(position)
+        val element = getItem(position)
 
         val view = LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false)
 
-        view.elementImage.setImageResource(country!!.image)
-        view.elementName.text = country.name
+        view.elementImage.setImageResource(element!!.image)
+        view.elementName.text = element.name
+        view.elementName.setTextColor(android.graphics.Color.parseColor(element.color))
 
         return view
     }

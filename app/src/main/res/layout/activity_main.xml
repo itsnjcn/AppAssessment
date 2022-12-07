@@ -10,8 +10,6 @@
         android:id="@+id/view"
         android:layout_width="415dp"
         android:layout_height="734dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         android:background="@drawable/graident_colors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,61 +36,97 @@
         android:id="@+id/textView"
         android:layout_width="336dp"
         android:layout_height="76dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="526dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="Combine different elements to produce an output."
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="311dp"
         android:layout_height="356dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="162dp"
         android:background="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="233dp"
         android:layout_height="49dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="622dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/roundcorners"
         android:fontFamily="@font/montserrat_bold"
         android:text="Calculate"
         android:textAllCaps="false"
         android:textColor="#FCE38A"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="235dp"
         android:layout_height="48dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="279dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="268dp"
         android:background="@drawable/rectangle_shapealt"
         android:hint="Select Element"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        android:popupBackground="@drawable/rectangle_shapealt"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="235dp"
         android:layout_height="48dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="401dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="168dp"
         android:background="@drawable/rectangle_shapealt"
         android:hint="Select Element"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        android:popupBackground="@drawable/rectangle_shapealt"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="96dp"
+        android:popupBackground="@drawable/rectangle_shapealt"
+        android:text="Result:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

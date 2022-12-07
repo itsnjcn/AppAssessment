@@ -5,33 +5,33 @@ data class Element(val image: Int, val name: String, val color: String)
 object Elements {
 
     private val images = intArrayOf(
-        R.drawable.anemo,
-        R.drawable.cryo,
-        R.drawable.dendro,
-        R.drawable.electro,
-        R.drawable.geo,
+        R.drawable.pyro,
         R.drawable.hydro,
-        R.drawable.pyro
+        R.drawable.anemo,
+        R.drawable.electro,
+        R.drawable.dendro,
+        R.drawable.cryo,
+        R.drawable.geo,
     )
 
     private val elements = arrayOf(
-        "Anemo",
-        "Cryo",
-        "Dendro",
-        "Electro",
-        "Geo",
+        "Pyro",
         "Hydro",
-        "Pyro"
+        "Anemo",
+        "Electro",
+        "Dendro",
+        "Cryo",
+        "Geo",
     )
 
     private val colors = arrayOf(
+        "#FE925D",
+        "#21E1EB",
+        "#72E2C3",
+        "#A757CB",
         "#23C18A",
         "#A0E9E5",
-        "#23C18A",
-        "#A757CB",
         "#E3B342",
-        "#21E1EB",
-        "#FE925D",
     )
 
     var list: ArrayList<Element>? = null
@@ -45,10 +45,10 @@ object Elements {
             for (i in images.indices) {
 
                 val imageId = images [i]
-                val countryName = elements[i]
-                val color = colors[i]
+                val elementName = elements[i]
+                val colorId = colors[i]
 
-                val element = Element(imageId, countryName, color)
+                val element = Element(imageId, elementName, colorId)
                 field!!.add(element)
             }
 
