@@ -4,7 +4,8 @@ data class Element(val image: Int, val name: String, val color: String)
 
 object Elements {
 
-    private val images = intArrayOf(
+    private val images = intArrayOf( // array of images
+        R.drawable.empty,
         R.drawable.pyro,
         R.drawable.hydro,
         R.drawable.anemo,
@@ -14,7 +15,8 @@ object Elements {
         R.drawable.geo,
     )
 
-    private val elements = arrayOf(
+    private val elements = arrayOf( // array of elements
+        "Select Element",
         "Pyro",
         "Hydro",
         "Anemo",
@@ -24,7 +26,8 @@ object Elements {
         "Geo",
     )
 
-    private val colors = arrayOf(
+    private val colors = arrayOf( // array of colors
+        "#FCE38A",
         "#FE925D",
         "#21E1EB",
         "#72E2C3",
@@ -34,15 +37,15 @@ object Elements {
         "#E3B342",
     )
 
-    var list: ArrayList<Element>? = null
+    var list: ArrayList<Element>? = null // creating a list of elements
         get() {
 
-            if (field != null) {
+            if (field != null) { // if the list is not empty
                 return field
             }
 
-            field = ArrayList()
-            for (i in images.indices) {
+            field = ArrayList() // if the list is empty, create a new list
+            for (i in images.indices) { // for loop to add the elements to the list
 
                 val imageId = images [i]
                 val elementName = elements[i]

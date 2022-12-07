@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
             {
                 textView2.text = "Superconduct"
             }
-            else if (spinner.selectedItemPosition>=0 && spinner2.selectedItemPosition==2 || spinner.selectedItemPosition==2 && spinner2.selectedItemPosition>=0) // Swirl
+            else if (spinner.selectedItemPosition==2 || spinner2.selectedItemPosition==2) // Swirl
             {
                 textView2.text = "Swirl"
             }
-            else if (spinner.selectedItemPosition>=0 && spinner2.selectedItemPosition==5 || spinner.selectedItemPosition==5 && spinner2.selectedItemPosition>=0) // Crystallize
+            else if (spinner.selectedItemPosition==6 || spinner2.selectedItemPosition==6) // Crystallize
             {
                 textView2.text = "Crystallize"
             }
@@ -73,4 +73,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }

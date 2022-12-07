@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">AppAssessment</string>
+    <string name="genshin_impact_calculator">Genshin Impact Calculator</string>
+    <string name="combine_different_elements_to_produce_an_output">Combine different elements to produce an output.</string>
+    <string name="calculate">Calculate</string>
+    <string name="select_element">Select Element</string>
+    <string name="select_element1">Select Element</string>
+    <string name="result">Result:</string>
 
     <string-array name="elements">
         <item>Anemo</item>

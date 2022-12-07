@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/anemo" />
+        app:srcCompat="@drawable/empty" />
 
     <TextView
         android:id="@+id/elementName"
@@ -23,7 +23,8 @@
         android:layout_height="42dp"
         android:layout_marginStart="52dp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Anemo"
+        android:text="Select"
+        android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
