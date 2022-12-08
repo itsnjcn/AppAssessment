@@ -16,14 +16,14 @@ object Elements {
     )
 
     private val elements = arrayOf( // array of elements
-        "Select Element",
-        "Pyro",
-        "Hydro",
-        "Anemo",
-        "Electro",
-        "Dendro",
-        "Cryo",
-        "Geo",
+        "Select Element", // 0
+        "Pyro", // 1
+        "Hydro", // 2
+        "Anemo", // 3
+        "Electro", // 4
+        "Dendro", // 5
+        "Cryo", // 6
+        "Geo", // 7
     )
 
     private val colors = arrayOf( // array of colors

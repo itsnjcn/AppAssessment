@@ -10,14 +10,14 @@ import kotlinx.android.synthetic.main.spinner_item.view.*
 class ElementAdapter(context: Context, elementList: List<Element>) : ArrayAdapter<Element>(context, 0, elementList) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        return initView(position, convertView, parent)
+        return initView(position, parent)
     }
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
-        return initView(position, convertView, parent)
+        return initView(position, parent)
     }
 
-    private fun initView(position: Int, convertView: View?, parent: ViewGroup): View {
+    private fun initView(position: Int, parent: ViewGroup): View {
 
         val element = getItem(position)
 

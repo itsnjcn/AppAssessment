@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/graident_colors"
     tools:context=".SplashScreen">
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="415dp"
-        android:layout_height="734dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:background="@drawable/graident_colors"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/genshin_logo" />
+        app:srcCompat="@drawable/genshin_logo"
+        android:contentDescription="@string/genshin_impact_logo" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -43,5 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/genshin_elements" />
+        app:srcCompat="@drawable/genshin_elements"
+        android:contentDescription="@string/genshin_elements_in_order" />
 </androidx.constraintlayout.widget.ConstraintLayout>
