@@ -29,6 +29,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:justificationMode="inter_word"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.326"
@@ -77,14 +78,16 @@
         android:fontFamily="@font/montserrat_extrabold"
         android:gravity="bottom|start"
         android:text="@string/test"
+        android:textAllCaps="false"
         android:textColor="#FCE38A"
         android:textSize="60sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/textView3"
@@ -94,7 +97,7 @@
         android:gravity="bottom"
         android:text="@string/the_reaction_is"
         android:textColor="#FCE38A"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.104"
