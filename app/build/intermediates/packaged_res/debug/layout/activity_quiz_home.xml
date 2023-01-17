@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizHome"
+    android:background="@drawable/graident_colors"
+    android:gravity="center"
+    >
+
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="321dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Rules are simple! Answer a total of five questions relating to the Genshin's elements system and we'll see whether or not you're that knowledgable to Genshin or not!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="356dp"
+        android:layout_height="245dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:gravity="center"
+        android:text="Genshin Quiz"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goBack"
+        android:layout_width="203dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/roundcorners"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/goBack"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="203dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/roundcorners"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="Continue"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

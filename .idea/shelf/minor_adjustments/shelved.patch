@@ -1,0 +1,1066 @@
+Index: app/src/main/res/layout/activity_quiz_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_quiz_home.xml b/app/src/main/res/layout/activity_quiz_home.xml
+new file mode 100644
+--- /dev/null	(date 1673891636693)
++++ b/app/src/main/res/layout/activity_quiz_home.xml	(date 1673891636693)
+@@ -0,0 +1,77 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".QuizHome"
++    android:background="@drawable/graident_colors"
++    android:gravity="center"
++    >
++
++
++    <TextView
++        android:id="@+id/text_description"
++        android:layout_width="321dp"
++        android:layout_height="188dp"
++        android:layout_marginTop="20dp"
++        android:fontFamily="@font/montserrat_medium"
++        android:text="Rules are simple! Answer a total of five questions relating to the Genshin's elements system and we'll see whether or not you're that knowledgable to Genshin or not!"
++        android:textColor="@color/white"
++        android:textSize="20sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.49"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView1" />
++
++    <TextView
++        android:id="@+id/textView1"
++        android:layout_width="356dp"
++        android:layout_height="245dp"
++        android:layout_marginTop="64dp"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:gravity="center"
++        android:text="Genshin Quiz"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="80sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.49"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.appcompat.widget.AppCompatButton
++        android:id="@+id/goBack"
++        android:layout_width="203dp"
++        android:layout_height="53dp"
++        android:layout_marginTop="56dp"
++        android:background="@drawable/roundcorners"
++        android:fontFamily="@font/montserrat_bold"
++        android:gravity="center"
++        android:text="@string/goBack"
++        android:textAlignment="center"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="25sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/button" />
++
++    <androidx.appcompat.widget.AppCompatButton
++        android:id="@+id/button"
++        android:layout_width="203dp"
++        android:layout_height="53dp"
++        android:layout_marginTop="48dp"
++        android:background="@drawable/roundcorners"
++        android:fontFamily="@font/montserrat_bold"
++        android:gravity="center"
++        android:text="Continue"
++        android:textAlignment="center"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="25sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/text_description" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/QuizHome.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/QuizHome.kt b/app/src/main/java/com/example/appassessment/QuizHome.kt
+new file mode 100644
+--- /dev/null	(date 1673889589879)
++++ b/app/src/main/java/com/example/appassessment/QuizHome.kt	(date 1673889589879)
+@@ -0,0 +1,24 @@
++package com.example.appassessment
++
++import android.content.Intent
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++import android.widget.Button
++
++class QuizHome : AppCompatActivity() {
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_quiz_home)
++        val btnStart = findViewById<Button>(R.id.button)
++        btnStart.setOnClickListener {
++            val Intent = Intent(this, QuestionActivity::class.java)
++            startActivity(Intent)
++        }
++
++        val btnBack = findViewById<Button>(R.id.goBack)
++        btnBack.setOnClickListener {
++            val Intent = Intent(this, MainActivity::class.java)
++            startActivity(Intent)
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/elements.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.appassessment\r\n\r\ndata class Element(val image: Int, val name: String, val color: String)\r\n\r\nobject Elements {\r\n\r\n    private val images = intArrayOf( // array of images\r\n        R.drawable.empty,\r\n        R.drawable.pyro,\r\n        R.drawable.hydro,\r\n        R.drawable.anemo,\r\n        R.drawable.electro,\r\n        R.drawable.dendro,\r\n        R.drawable.cryo,\r\n        R.drawable.geo,\r\n    )\r\n\r\n    private val elements = arrayOf( // array of elements\r\n        \"Select Element\", // 0\r\n        \"Pyro\", // 1\r\n        \"Hydro\", // 2\r\n        \"Anemo\", // 3\r\n        \"Electro\", // 4\r\n        \"Dendro\", // 5\r\n        \"Cryo\", // 6\r\n        \"Geo\", // 7\r\n    )\r\n\r\n    private val colors = arrayOf( // array of colors\r\n        \"#FCE38A\",\r\n        \"#FE925D\",\r\n        \"#21E1EB\",\r\n        \"#72E2C3\",\r\n        \"#A757CB\",\r\n        \"#23C18A\",\r\n        \"#A0E9E5\",\r\n        \"#E3B342\",\r\n    )\r\n\r\n    var list: ArrayList<Element>? = null // creating a list of elements\r\n        get() {\r\n\r\n            if (field != null) { // if the list is not empty\r\n                return field\r\n            }\r\n\r\n            field = ArrayList() // if the list is empty, create a new list\r\n            for (i in images.indices) { // for loop to add the elements to the list\r\n\r\n                val imageId = images [i]\r\n                val elementName = elements[i]\r\n                val colorId = colors[i]\r\n\r\n                val element = Element(imageId, elementName, colorId)\r\n                field!!.add(element)\r\n            }\r\n\r\n            return field\r\n        }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/elements.kt b/app/src/main/java/com/example/appassessment/elements.kt
+--- a/app/src/main/java/com/example/appassessment/elements.kt	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/java/com/example/appassessment/elements.kt	(date 1673875643557)
+@@ -1,4 +1,6 @@
+-package com.example.appassessment
++package com.example.assessment_2
++
++import com.example.appassessment.R
+ 
+ data class Element(val image: Int, val name: String, val color: String)
+ 
+Index: app/src/main/res/layout/activity_question.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_question.xml b/app/src/main/res/layout/activity_question.xml
+new file mode 100644
+--- /dev/null	(date 1673892203181)
++++ b/app/src/main/res/layout/activity_question.xml	(date 1673892203181)
+@@ -0,0 +1,101 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical"
++    android:background="@drawable/graident_colors"
++    android:padding="10dp"
++    android:gravity="center"
++
++    tools:context=".QuestionActivity">
++
++    <TextView
++        android:id="@+id/question_text"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:gravity="center"
++        android:text="ENTER YOUR QUESTION"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="30sp"
++        android:textStyle="bold" />
++
++    <TextView
++        android:id="@+id/progress_text"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:padding="5dp"
++        android:text="1/5"
++        android:textColor="#FCE38A"
++        android:textSize="20sp" />
++
++    <TextView
++        android:id="@+id/opt_1"
++        android:layout_width="match_parent"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:layout_height="wrap_content"
++        android:text="option1"
++
++        android:background="@drawable/rectangle_shapealt"
++        android:padding="10dp"
++        android:textSize="18sp"
++        android:layout_marginTop="20dp"
++        android:textColor="#FCE38A"
++        android:gravity="center"/>
++
++    <TextView
++        android:id="@+id/opt_2"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="20dp"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:background="@drawable/rectangle_shapealt"
++        android:gravity="center"
++        android:textColor="#FCE38A"
++        android:padding="10dp"
++        android:text="option1"
++        android:textSize="18sp" />
++
++    <TextView
++        android:id="@+id/opt_3"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="option1"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:background="@drawable/rectangle_shapealt"
++        android:padding="10dp"
++        android:textSize="18sp"
++        android:textColor="#FCE38A"
++        android:layout_marginTop="20dp"
++        android:gravity="center"/>
++    <TextView
++        android:id="@+id/opt_4"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="option1"
++        android:background="@drawable/rectangle_shapealt"
++        android:padding="10dp"
++        android:textSize="18sp"
++        android:textColor="#FCE38A"
++        android:layout_marginTop="20dp"
++        android:gravity="center"/>
++
++
++    <Button
++        android:id="@+id/submit"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="15dp"
++        android:background="@drawable/roundcorners"
++        android:fontFamily="@font/montserrat_bold"
++        android:text="Submit"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="25sp" />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/QuestionActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/QuestionActivity.kt b/app/src/main/java/com/example/appassessment/QuestionActivity.kt
+new file mode 100644
+--- /dev/null	(date 1673887846140)
++++ b/app/src/main/java/com/example/appassessment/QuestionActivity.kt	(date 1673887846140)
+@@ -0,0 +1,139 @@
++package com.example.appassessment
++
++import android.content.Intent
++import android.graphics.Color
++import android.graphics.Typeface
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++import android.widget.TextView
++import androidx.core.content.ContextCompat
++import kotlinx.android.synthetic.main.activity_question.*
++
++class QuestionActivity : AppCompatActivity() {
++    private var Name:String?=null
++    private var score:Int=0
++
++    private var currentPosition:Int=1
++    private var questionList:ArrayList<QuestionData> ? = null
++    private var selecedOption:Int=0
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_question)
++
++        Name=intent.getStringExtra(setData.name)
++
++        questionList=setData.getQuestion()
++
++        setQuestion()
++
++        opt_1.setOnClickListener{
++
++            selectedOptionStyle(opt_1,1)
++        }
++        opt_2.setOnClickListener{
++
++            selectedOptionStyle(opt_2,2)
++        }
++        opt_3.setOnClickListener{
++
++            selectedOptionStyle(opt_3,3)
++        }
++        opt_4.setOnClickListener{
++
++            selectedOptionStyle(opt_4,4)
++        }
++
++        submit.setOnClickListener {
++            if(selecedOption!=0)
++            {
++                val question=questionList!![currentPosition-1]
++                if(selecedOption!=question.correct_ans)
++                {
++                    setColor(selecedOption,R.drawable.wrong_question_option)
++                }else{
++                    score++;
++                }
++                setColor(question.correct_ans,R.drawable.correct_question_option)
++                if(currentPosition==questionList!!.size)
++                    submit.text="FINISH"
++                else
++                    submit.text="Go to Next"
++            }else{
++                currentPosition++
++                when{
++                    currentPosition<=questionList!!.size->{
++                        setQuestion()
++                    }
++                    else->{
++                        var intent= Intent(this,Result::class.java)
++                        intent.putExtra(setData.name,Name.toString())
++                        intent.putExtra(setData.score,score.toString())
++                        intent.putExtra("total size",questionList!!.size.toString())
++
++                        startActivity(intent)
++                        finish()
++                    }
++                }
++            }
++            selecedOption=0
++        }
++
++    }
++
++    fun setColor(opt:Int,color:Int){
++        when(opt){
++            1->{
++                opt_1.background= ContextCompat.getDrawable(this,color)
++            }
++            2->{
++                opt_2.background= ContextCompat.getDrawable(this,color)
++            }
++            3->{
++                opt_3.background= ContextCompat.getDrawable(this,color)
++            }
++            4->{
++                opt_4.background= ContextCompat.getDrawable(this,color)
++            }
++        }
++    }
++
++
++    fun setQuestion(){
++
++        val question = questionList!![currentPosition-1]
++        setOptionStyle()
++
++        progress_text.text="${currentPosition}"+"/"+"${questionList!!.size}"
++        question_text.text=question.question
++        opt_1.text=question.option_one
++        opt_2.text=question.option_tw0
++        opt_3.text=question.option_three
++        opt_4.text=question.option_four
++
++    }
++
++    fun setOptionStyle(){
++        var optionList:ArrayList<TextView> = arrayListOf()
++        optionList.add(0,opt_1)
++        optionList.add(1,opt_2)
++        optionList.add(2,opt_3)
++        optionList.add(3,opt_4)
++
++        for(op in optionList)
++        {
++            op.setTextColor(Color.parseColor("#555151"))
++            op.background= ContextCompat.getDrawable(this,R.drawable.question_option)
++            op.typeface= Typeface.DEFAULT
++        }
++    }
++
++    fun selectedOptionStyle(view: TextView, opt:Int){
++
++        setOptionStyle()
++        selecedOption=opt
++        view.background= ContextCompat.getDrawable(this,R.drawable.selected_question_option)
++        view.typeface= Typeface.DEFAULT_BOLD
++        view.setTextColor(Color.parseColor("#000000"))
++
++    }
++}
+\ No newline at end of file
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\NJCN\\.android\\avd\\Pixel_2_API_30_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2022-12-09T08:19:27.573116400Z\" />\r\n    <multipleDevicesSelectedInDropDown value=\"true\" />\r\n    <targetsSelectedWithDialog>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\NJCN\\.android\\avd\\Pixel_2_API_30_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetsSelectedWithDialog>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1673900275453)
+@@ -1,19 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+-    <targetSelectedWithDropDown>
+-      <Target>
+-        <type value="QUICK_BOOT_TARGET" />
+-        <deviceKey>
+-          <Key>
+-            <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\NJCN\.android\avd\Pixel_2_API_30_3.avd" />
+-          </Key>
+-        </deviceKey>
+-      </Target>
+-    </targetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2022-12-09T08:19:27.573116400Z" />
+-    <multipleDevicesSelectedInDropDown value="true" />
+     <targetsSelectedWithDialog>
+       <Target>
+         <type value="QUICK_BOOT_TARGET" />
+Index: app/src/main/res/drawable/wrong_question_option.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/wrong_question_option.xml b/app/src/main/res/drawable/wrong_question_option.xml
+new file mode 100644
+--- /dev/null	(date 1617446711000)
++++ b/app/src/main/res/drawable/wrong_question_option.xml	(date 1617446711000)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++
++
++    <solid android:color="#F44336"/>
++    <corners android:radius="5dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/correct_question_option.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/correct_question_option.xml b/app/src/main/res/drawable/correct_question_option.xml
+new file mode 100644
+--- /dev/null	(date 1617446711000)
++++ b/app/src/main/res/drawable/correct_question_option.xml	(date 1617446711000)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++
++    <solid android:color="#4CAF50"/>
++    <corners android:radius="5dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/ElementAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.appassessment\r\n\r\nimport android.widget.ArrayAdapter\r\nimport android.content.Context\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport kotlinx.android.synthetic.main.spinner_item.view.*\r\n\r\nclass ElementAdapter(context: Context, elementList: List<Element>) : ArrayAdapter<Element>(context, 0, elementList) {\r\n\r\n    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {\r\n        return initView(position, parent)\r\n    }\r\n\r\n    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {\r\n        return initView(position, parent)\r\n    }\r\n\r\n    private fun initView(position: Int, parent: ViewGroup): View {\r\n\r\n        val element = getItem(position)\r\n\r\n        val view = LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false)\r\n\r\n        view.elementImage.setImageResource(element!!.image)\r\n        view.elementName.text = element.name\r\n        view.elementName.setTextColor(android.graphics.Color.parseColor(element.color))\r\n\r\n        return view\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/ElementAdapter.kt b/app/src/main/java/com/example/appassessment/ElementAdapter.kt
+--- a/app/src/main/java/com/example/appassessment/ElementAdapter.kt	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/java/com/example/appassessment/ElementAdapter.kt	(date 1673875579612)
+@@ -1,10 +1,12 @@
+-package com.example.appassessment
++package com.example.app2assessment
+ 
+ import android.widget.ArrayAdapter
+ import android.content.Context
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
++import com.example.appassessment.R
++import com.example.assessment_2.Element
+ import kotlinx.android.synthetic.main.spinner_item.view.*
+ 
+ class ElementAdapter(context: Context, elementList: List<Element>) : ArrayAdapter<Element>(context, 0, elementList) {
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Theme.AppAssessment\" parent=\"Theme.MaterialComponents.DayNight.DarkActionBar\">\r\n        <!-- Primary brand color. -->\r\n        <item name=\"colorPrimary\">@color/purple_500</item>\r\n        <item name=\"colorPrimaryVariant\">@color/purple_700</item>\r\n        <item name=\"colorOnPrimary\">@color/white</item>\r\n        <!-- Secondary brand color. -->\r\n        <item name=\"colorSecondary\">@color/teal_200</item>\r\n        <item name=\"colorSecondaryVariant\">@color/teal_700</item>\r\n        <item name=\"colorOnSecondary\">@color/black</item>\r\n        <!-- Status bar color. -->\r\n        <item name=\"android:statusBarColor\">?attr/colorPrimaryVariant</item>\r\n        <!-- Customize your theme here. -->\r\n    </style>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/res/values/themes.xml	(date 1673902599675)
+@@ -1,14 +1,14 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+     <!-- Base application theme. -->
+-    <style name="Theme.AppAssessment" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++    <style name="Theme.AppAssessment" parent="Theme.AppCompat.Light.NoActionBar">
+         <!-- Primary brand color. -->
+-        <item name="colorPrimary">@color/purple_500</item>
+-        <item name="colorPrimaryVariant">@color/purple_700</item>
+-        <item name="colorOnPrimary">@color/white</item>
++        <item name="colorPrimary">#0C2233</item>
++        <item name="colorPrimaryVariant">#0C2233</item>
++        <item name="colorOnPrimary">#0C2233</item>
+         <!-- Secondary brand color. -->
+-        <item name="colorSecondary">@color/teal_200</item>
+-        <item name="colorSecondaryVariant">@color/teal_700</item>
+-        <item name="colorOnSecondary">@color/black</item>
++        <item name="colorSecondary">#0E5F76</item>
++        <item name="colorSecondaryVariant">#0E5F76</item>
++        <item name="colorOnSecondary">#0E5F76</item>
+         <!-- Status bar color. -->
+         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+         <!-- Customize your theme here. -->
+Index: app/src/main/res/layout/popup_info.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/popup_info.xml b/app/src/main/res/layout/popup_info.xml
+new file mode 100644
+--- /dev/null	(date 1673941326843)
++++ b/app/src/main/res/layout/popup_info.xml	(date 1673941326843)
+@@ -0,0 +1,100 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="wrap_content"
++    android:layout_height="wrap_content"
++    android:background="@drawable/rectangle_shape">
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="376dp"
++        android:layout_height="626dp"
++        android:text="@string/placeholder_text"
++        android:textColor="#0E5F76"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <TextView
++        android:id="@+id/textView1"
++        android:layout_width="360dp"
++        android:layout_height="66dp"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:gravity="start"
++        android:text="Information"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="50sp"
++        app:layout_constraintEnd_toEndOf="@+id/textView4"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="@+id/textView4"
++        app:layout_constraintTop_toTopOf="@+id/textView4" />
++
++    <TextView
++        android:id="@+id/text_description"
++        android:layout_width="341dp"
++        android:layout_height="165dp"
++        android:layout_marginTop="4dp"
++        android:fontFamily="@font/montserrat_medium"
++        android:justificationMode="inter_word"
++        android:text="Genshin Impact Calcutor is an app where you can combine two elements and form a reaction based on the game called Genshin Impact. Under no circumstances that this application is affliated to Genshin Impact or Hoyoverse."
++        android:textColor="@color/white"
++        android:textSize="18sp"
++        app:layout_constraintEnd_toEndOf="@+id/textView4"
++        app:layout_constraintHorizontal_bias="0.421"
++        app:layout_constraintStart_toStartOf="@+id/textView4"
++        app:layout_constraintTop_toBottomOf="@+id/textView1" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="360dp"
++        android:layout_height="66dp"
++        android:fontFamily="@font/montserrat_extrabold"
++        android:gravity="start"
++        android:text="Instructions"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="50sp"
++        app:layout_constraintEnd_toEndOf="@+id/textView4"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="@+id/textView4"
++        app:layout_constraintTop_toBottomOf="@+id/text_description" />
++
++    <TextView
++        android:id="@+id/text_description1"
++        android:layout_width="338dp"
++        android:layout_height="232dp"
++        android:layout_marginTop="12dp"
++        android:fontFamily="@font/montserrat_medium"
++        android:justificationMode="inter_word"
++        android:text="In this calculator, you have to choose one of seven elements from two of these dropdowns to see and check whether or not it has an reaction. To start, you can simply tap the dropdown boxes below the text of each element and select which element you want to check. After that, you can tap the button below the dropdown boxes to see the result."
++        android:textColor="@color/white"
++        android:textSize="18sp"
++        app:layout_constraintEnd_toEndOf="@+id/textView4"
++        app:layout_constraintHorizontal_bias="0.421"
++        app:layout_constraintStart_toStartOf="@+id/textView4"
++        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++    <androidx.appcompat.widget.AppCompatButton
++        android:id="@+id/goBack"
++        android:layout_width="203dp"
++        android:layout_height="53dp"
++        android:layout_marginBottom="28dp"
++        android:background="@drawable/roundcorners"
++        android:fontFamily="@font/montserrat_bold"
++        android:gravity="center"
++        android:text="@string/goBack"
++        android:textAlignment="center"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="25sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.502"
++        app:layout_constraintStart_toStartOf="@+id/textView4" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@drawable/graident_colors\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView1\"\r\n        android:layout_width=\"354dp\"\r\n        android:layout_height=\"107dp\"\r\n        android:fontFamily=\"@font/montserrat_extrabold\"\r\n        android:text=\"@string/genshin_impact_calculator\"\r\n        android:textColor=\"#FCE38A\"\r\n        android:textSize=\"40sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.275\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.025\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView\"\r\n        android:layout_width=\"333dp\"\r\n        android:layout_height=\"65dp\"\r\n        android:fontFamily=\"@font/montserrat_medium\"\r\n        android:text=\"@string/combine_different_elements_to_produce_an_output\"\r\n        android:textColor=\"#FFFFFF\"\r\n        android:textSize=\"20sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.205\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView1\"\r\n        app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n    <View\r\n        android:id=\"@+id/view2\"\r\n        android:layout_width=\"311dp\"\r\n        android:layout_height=\"356dp\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:background=\"@drawable/rectangle_shape\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView\"\r\n        app:layout_constraintVertical_bias=\"0.025\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button\"\r\n        android:layout_width=\"233dp\"\r\n        android:layout_height=\"49dp\"\r\n        android:background=\"@drawable/roundcorners\"\r\n        android:fontFamily=\"@font/montserrat_bold\"\r\n        android:text=\"@string/calculate\"\r\n        android:textAllCaps=\"false\"\r\n        android:textColor=\"#FCE38A\"\r\n        android:textSize=\"25sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.494\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintVertical_bias=\"0.379\" />\r\n\r\n    <Spinner\r\n        android:id=\"@+id/spinner\"\r\n        android:layout_width=\"235dp\"\r\n        android:layout_height=\"48dp\"\r\n        android:layout_marginBottom=\"218dp\"\r\n        android:background=\"@drawable/rectangle_shapealt\"\r\n        android:hint=\"@string/select_element\"\r\n        android:popupBackground=\"@drawable/rectangle_shapealt\"\r\n        android:spinnerMode=\"dropdown\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/view2\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/view2\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView5\"\r\n        tools:ignore=\"SpeakableTextPresentCheck\" />\r\n\r\n    <Spinner\r\n        android:id=\"@+id/spinner2\"\r\n        android:layout_width=\"235dp\"\r\n        android:layout_height=\"48dp\"\r\n        android:layout_marginBottom=\"79dp\"\r\n        android:background=\"@drawable/rectangle_shapealt\"\r\n        android:hint=\"@string/select_element1\"\r\n        android:popupBackground=\"@drawable/rectangle_shapealt\"\r\n        android:spinnerMode=\"dropdown\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/view2\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/view2\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView7\"\r\n        tools:ignore=\"SpeakableTextPresentCheck\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView2\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"60dp\"\r\n        android:popupBackground=\"@drawable/rectangle_shapealt\"\r\n        android:text=\"@string/result\"\r\n        android:textColor=\"#0E5F76\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/view2\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/view2\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/spinner2\"\r\n        app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView5\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"68dp\"\r\n        android:layout_marginBottom=\"266dp\"\r\n        android:fontFamily=\"@font/montserrat_medium\"\r\n        android:text=\"@string/choose_the_1st_element\"\r\n        android:textColor=\"#FCE38A\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/view2\"\r\n        app:layout_constraintHorizontal_bias=\"0.263\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/view2\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/view2\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView7\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"68dp\"\r\n        android:layout_marginBottom=\"127dp\"\r\n        android:fontFamily=\"@font/montserrat_medium\"\r\n        android:text=\"@string/choose_the_2nd_element\"\r\n        android:textColor=\"#FCE38A\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/view2\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/view2\"\r\n        app:layout_constraintHorizontal_bias=\"0.283\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/view2\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/spinner\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1673883073155)
+@@ -22,6 +22,17 @@
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.025" />
+ 
++    <Button
++        android:id="@+id/button2"
++        android:layout_width="35dp"
++        android:layout_height="35dp"
++        android:layout_marginTop="8dp"
++        android:background="@drawable/ic_baseline_help_24"
++        app:layout_constraintEnd_toEndOf="@+id/view2"
++        app:layout_constraintHorizontal_bias="0.956"
++        app:layout_constraintStart_toStartOf="@+id/view2"
++        app:layout_constraintTop_toTopOf="@+id/view2" />
++
+     <TextView
+         android:id="@+id/textView"
+         android:layout_width="333dp"
+@@ -64,7 +75,22 @@
+         app:layout_constraintHorizontal_bias="0.494"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/view2"
+-        app:layout_constraintVertical_bias="0.379" />
++        app:layout_constraintVertical_bias="0.104" />
++
++    <Button
++        android:id="@+id/button3"
++        android:layout_width="159dp"
++        android:layout_height="37dp"
++        android:background="@drawable/roundcorners"
++        android:fontFamily="@font/montserrat_bold"
++        android:text="Put your Genshin Knowledge to the test!"
++        android:textAllCaps="false"
++        android:textColor="#FCE38A"
++        android:textSize="10sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/button" />
+ 
+     <Spinner
+         android:id="@+id/spinner"
+Index: app/src/main/java/com/example/appassessment/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.appassessment\r\n\r\nimport android.annotation.SuppressLint\r\nimport android.app.Dialog\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport kotlinx.android.synthetic.main.activity_main.*\r\nimport kotlinx.android.synthetic.main.popup_window.view.*\r\n\r\nclass MainActivity : AppCompatActivity() {\r\n\r\n    @SuppressLint(\"InflateParams\", \"SetTextI18n\")\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_main)\r\n\r\n        val b1 = findViewById<Button>(R.id.button) // creating a variable name b1 for button\r\n\r\n        //setting the 1st spinner\r\n        val adapter = ElementAdapter(this, Elements.list!!)\r\n        spinner.adapter = adapter\r\n\r\n        //setting the 2nd spinner\r\n        val adapter2 = ElementAdapter(this, Elements.list!!)\r\n        spinner2.adapter = adapter2\r\n\r\n        //setting the results\r\n        val adapter3 = ReactionAdapter(this, Reactions.list!!)\r\n\r\n        // setting the action for the button\r\n        b1.setOnClickListener {\r\n            val popup = layoutInflater.inflate(R.layout.popup_window, null)\r\n\r\n            val popupWindow = Dialog(this)\r\n            popupWindow.setContentView(popup)\r\n\r\n            popupWindow.window?.setBackgroundDrawableResource(android.R.color.transparent)\r\n            popupWindow.show()\r\n\r\n            val closebtn = popup.findViewById<Button>(R.id.goBack)\r\n            closebtn.setOnClickListener {\r\n                popupWindow.dismiss()\r\n            }\r\n\r\n            // getting the selected items from the spinners\r\n            val sp1 = spinner.selectedItemPosition\r\n            val sp2 = spinner2.selectedItemPosition\r\n\r\n            if (sp1==1 && sp2==2 || sp1==2 && sp2==1) // Vaporize\r\n            {\r\n\r\n                textView2.text = \"Vaporize\"\r\n                popup.title_reaction.text = adapter3.getItem(0)!!.title\r\n                popup.text_description.text = adapter3.getItem(0)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(0)!!.gif)\r\n            }\r\n            else if (sp1==1 && sp2==4 || sp1==4 && sp2==1) // Overloaded\r\n            {\r\n                textView2.text = \"Overloaded\"\r\n                popup.title_reaction.text = adapter3.getItem(1)!!.title\r\n                popup.text_description.text = adapter3.getItem(1)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(1)!!.gif)\r\n            }\r\n            else if (sp1==1 && sp2==5 || sp1==5 && sp2==1) // Burning\r\n            {\r\n                textView2.text = \"Burning\"\r\n                popup.title_reaction.text = adapter3.getItem(6)!!.title\r\n                popup.text_description.text = adapter3.getItem(6)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(6)!!.gif)\r\n            }\r\n            else if (sp1==1 && sp2==6 || sp1==6 && sp2==1) // Melt\r\n            {\r\n                textView2.text = \"Melt\"\r\n                popup.title_reaction.text = adapter3.getItem(3)!!.title\r\n                popup.text_description.text = adapter3.getItem(3)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(3)!!.gif)\r\n            }\r\n            else if (sp1==2 && sp2==4 || sp1==4 && sp2==2) // Electro-Charged\r\n            {\r\n                textView2.text = \"Electro-Charged\"\r\n                popup.title_reaction.text = adapter3.getItem(2)!!.title\r\n                popup.text_description.text = adapter3.getItem(2)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(2)!!.gif)\r\n            }\r\n            else if (sp1==2 && sp2==5 || sp1==5 && sp2==2) // Bloom\r\n            {\r\n                textView2.text = \"Bloom\"\r\n                popup.title_reaction.text = adapter3.getItem(7)!!.title\r\n                popup.text_description.text = adapter3.getItem(7)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(7)!!.gif)\r\n            }\r\n            else if (sp1==2 && sp2==6 || sp1==6 && sp2==2) // Frozen\r\n            {\r\n                textView2.text = \"Frozen\"\r\n                popup.title_reaction.text = adapter3.getItem(4)!!.title\r\n                popup.text_description.text = adapter3.getItem(4)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(4)!!.gif)\r\n            }\r\n            else if (sp1==4 && sp2==5 || sp1==5 && sp2==4) // Catalyze\r\n            {\r\n                textView2.text = \"Catalyze/Quicken\"\r\n                popup.title_reaction.text = adapter3.getItem(8)!!.title\r\n                popup.text_description.text = adapter3.getItem(8)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(8)!!.gif)\r\n            }\r\n            else if (sp1==4 && sp2==6 || sp1==6 && sp2==4) // Superconduct\r\n            {\r\n                textView2.text = \"Superconduct\"\r\n                popup.title_reaction.text = adapter3.getItem(5)!!.title\r\n                popup.text_description.text = adapter3.getItem(5)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(5)!!.gif)\r\n\r\n            }\r\n            else if (sp1==1 && sp2==3 || sp1==3 && sp2==1\r\n                ||   sp1==2 && sp2==3 || sp1==3 && sp2==2\r\n                ||   sp1==3 && sp2==3\r\n                ||   sp1==4 && sp2==3 || sp1==3 && sp2==4\r\n                ||   sp1==6 && sp2==3 || sp1==3 && sp2==6) // Swirl\r\n            {\r\n                textView2.text = \"Swirl\"\r\n                popup.title_reaction.text = adapter3.getItem(9)!!.title\r\n                popup.text_description.text = adapter3.getItem(9)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(9)!!.gif)\r\n            }\r\n            else if (sp1==1 && sp2==7 || sp1==7 && sp2==1\r\n                ||   sp1==2 && sp2==7 || sp1==7 && sp2==2\r\n                ||   sp1==7 && sp2==7\r\n                ||   sp1==4 && sp2==7 || sp1==7 && sp2==4\r\n                ||   sp1==6 && sp2==7 || sp1==7 && sp2==6) // Crystallize\r\n            {\r\n                textView2.text = \"Crystallize\"\r\n                popup.title_reaction.text = adapter3.getItem(10)!!.title\r\n                popup.text_description.text = adapter3.getItem(10)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(10)!!.gif)\r\n            }\r\n            else if (sp1==1 && sp2==0 || sp1==0 && sp2==1\r\n                ||   sp1==2 && sp2==0 || sp1==0 && sp2==2\r\n                ||   sp1==0 && sp2==0\r\n                ||   sp1==4 && sp2==0 || sp1==0 && sp2==4\r\n                ||   sp1==6 && sp2==0 || sp1==0 && sp2==6) // None\r\n            {\r\n                textView2.text = \"No Reaction\"\r\n                popup.title_reaction.text = adapter3.getItem(11)!!.title\r\n                popup.text_description.text = adapter3.getItem(11)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(11)!!.gif)\r\n            }\r\n            else\r\n            {\r\n                textView2.text = \"No Reaction\"\r\n                popup.title_reaction.text = adapter3.getItem(11)!!.title\r\n                popup.text_description.text = adapter3.getItem(11)!!.desc\r\n                popup.gif_reaction.setImageResource(adapter3.getItem(11)!!.gif)\r\n            }\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/MainActivity.kt b/app/src/main/java/com/example/appassessment/MainActivity.kt
+--- a/app/src/main/java/com/example/appassessment/MainActivity.kt	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/java/com/example/appassessment/MainActivity.kt	(date 1673889377311)
+@@ -2,9 +2,12 @@
+ 
+ import android.annotation.SuppressLint
+ import android.app.Dialog
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
+ import android.widget.Button
++import com.example.app2assessment.ElementAdapter
++import com.example.assessment_2.Elements
+ import kotlinx.android.synthetic.main.activity_main.*
+ import kotlinx.android.synthetic.main.popup_window.view.*
+ 
+@@ -16,6 +19,28 @@
+         setContentView(R.layout.activity_main)
+ 
+         val b1 = findViewById<Button>(R.id.button) // creating a variable name b1 for button
++        val b2 = findViewById<Button>(R.id.button2) // creating a variable name b2 for button
++        val b3 = findViewById<Button>(R.id.button3) // creating a variable name b3 for button
++
++        b2.setOnClickListener{
++            val popup = layoutInflater.inflate(R.layout.popup_info, null)
++
++            val popupWindow = Dialog(this)
++            popupWindow.setContentView(popup)
++
++            popupWindow.window?.setBackgroundDrawableResource(android.R.color.transparent)
++            popupWindow.show()
++
++            val closebtn = popup.findViewById<Button>(R.id.goBack)
++            closebtn.setOnClickListener{
++                popupWindow.dismiss()
++            }
++        }
++
++        b3.setOnClickListener {
++            val Intent = Intent(this, QuizHome::class.java)
++            startActivity(Intent)
++        }
+ 
+         //setting the 1st spinner
+         val adapter = ElementAdapter(this, Elements.list!!)
+Index: app/src/main/java/com/example/appassessment/setData.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/setData.kt b/app/src/main/java/com/example/appassessment/setData.kt
+new file mode 100644
+--- /dev/null	(date 1673887846134)
++++ b/app/src/main/java/com/example/appassessment/setData.kt	(date 1673887846134)
+@@ -0,0 +1,70 @@
++package com.example.appassessment
++
++object setData {
++
++    const val name:String="name"
++    const val score:String="score"
++
++   fun getQuestion():ArrayList<QuestionData>{
++       var que:ArrayList<QuestionData> = arrayListOf()
++
++       var question1 = QuestionData(
++           1,
++           "Which Element Does Not Reduce The Hp Of The Electro Hypostasis' Prisms?",
++
++           "Pyro",
++           "Hydro",
++           "Cryo",
++           "Geo",
++           2
++       )
++       var question2 = QuestionData(
++           2,
++           "Which Of The Following Elements Is The Most Efficient At Breaking A Hydro Abyss Mage's Shield?",
++
++           "Pyro",
++           "Hydro",
++           "Cryo",
++           "Dendro",
++           3
++       )
++       var question3 = QuestionData(
++           3,
++           "When The Golden Wolflord Has Summoned Three Rifthound Skulls To Perform A Coordinated Attack, What Elemental Attack Can Be Used To Quickly Defeat Them?",
++
++           "Pyro",
++           "Hydro",
++           "Cryo",
++           "Geo",
++           4
++       )
++       var question4 = QuestionData(
++           4,
++           "What Reaction Will Occur When A Pyro Elemental Attack Is Used Against Anemo Hypostasis: Beth?",
++
++           "Hydro",
++           "Geo",
++           "Swirl",
++           "Dendro",
++           3
++       )
++
++       var question5 = QuestionData(
++           5,
++           "Which Of The Following Elemental Reaction Damage Is The Thunder Manifestation Immune To?",
++
++           "Electro-Charged",
++           "Crystallize",
++           "Vaporize",
++           "Frozen",
++           1
++       )
++
++       que.add(question1)
++       que.add(question2)
++       que.add(question3)
++       que.add(question4)
++       que.add(question5)
++       return que
++   }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/QuestionData.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/QuestionData.kt b/app/src/main/java/com/example/appassessment/QuestionData.kt
+new file mode 100644
+--- /dev/null	(date 1673887846129)
++++ b/app/src/main/java/com/example/appassessment/QuestionData.kt	(date 1673887846129)
+@@ -0,0 +1,12 @@
++package com.example.appassessment
++
++data class QuestionData (
++    var id:Int,
++    var question:String,
++
++    var option_one:String,
++    var option_tw0:String,
++    var option_three:String,
++    var option_four:String,
++    var correct_ans:Int
++        )
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@drawable/logo\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@drawable/logo\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.AppAssessment\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".SplashScreen\"\r\n            android:exported=\"true\"\r\n            android:theme=\"@style/Theme.AppCompat.Light.NoActionBar\">\r\n            <meta-data\r\n                android:name=\"android.app.lib_name\"\r\n                android:value=\"\" />\r\n\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\"\r\n            android:theme=\"@style/Theme.AppCompat.Light.NoActionBar\">\r\n            <meta-data\r\n                android:name=\"android.app.lib_name\"\r\n                android:value=\"\" />\r\n        </activity>\r\n\r\n        <meta-data\r\n            android:name=\"preloaded_fonts\"\r\n            android:resource=\"@array/preloaded_fonts\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 312a6f017a52870ea9d7240d60bd542f73ca8746)
++++ b/app/src/main/AndroidManifest.xml	(date 1673887845768)
+@@ -13,6 +13,27 @@
+         android:theme="@style/Theme.AppAssessment"
+         tools:targetApi="31">
+         <activity
++            android:name=".Result"
++            android:exported="false">
++            <meta-data
++                android:name="android.app.lib_name"
++                android:value="" />
++        </activity>
++        <activity
++            android:name=".QuestionActivity"
++            android:exported="false">
++            <meta-data
++                android:name="android.app.lib_name"
++                android:value="" />
++        </activity>
++        <activity
++            android:name=".QuizHome"
++            android:exported="false">
++            <meta-data
++                android:name="android.app.lib_name"
++                android:value="" />
++        </activity>
++        <activity
+             android:name=".SplashScreen"
+             android:exported="true"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+Index: app/src/main/res/drawable/question_option.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/question_option.xml b/app/src/main/res/drawable/question_option.xml
+new file mode 100644
+--- /dev/null	(date 1617446711000)
++++ b/app/src/main/res/drawable/question_option.xml	(date 1617446711000)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++<stroke android:color="@color/black"
++    android:width="1dp"></stroke>
++
++    <solid android:color="@color/white"/>
++    <corners android:radius="5dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/selected_question_option.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/selected_question_option.xml b/app/src/main/res/drawable/selected_question_option.xml
+new file mode 100644
+--- /dev/null	(date 1617446711000)
++++ b/app/src/main/res/drawable/selected_question_option.xml	(date 1617446711000)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++<stroke android:color="@color/purple_700"
++    android:width="2dp"></stroke>
++
++    <solid android:color="@color/white"/>
++    <corners android:radius="5dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_result.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_result.xml b/app/src/main/res/layout/activity_result.xml
+new file mode 100644
+--- /dev/null	(date 1673890716404)
++++ b/app/src/main/res/layout/activity_result.xml	(date 1673890716404)
+@@ -0,0 +1,72 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="horizontal"
++    android:background="@drawable/graident_colors"
++    android:padding="10dp"
++    android:gravity="center"
++    tools:context=".Result">
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        app:cardCornerRadius="8dp"
++        app:cardElevation="5dp"
++        >
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical"
++            android:gravity="center"
++            android:background="@drawable/rectangle_shape"
++            android:padding="10dp">
++            <TextView
++                android:id="@+id/congo"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Congratulations!!"
++                android:fontFamily="@font/montserrat_extrabold"
++                android:textColor="#FCE38A"
++                android:gravity="center"
++                android:textSize="40sp"
++                android:textStyle="bold"/>
++            <TextView
++
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="10dp"
++                android:text="Your Score is:"
++                android:fontFamily="@font/montserrat_extrabold"
++                android:textColor="#FCE38A"
++                android:gravity="center"
++                android:textSize="20sp"
++                />
++            <TextView
++                android:id="@+id/Score"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="4/5"
++                android:layout_marginTop="10dp"
++                android:gravity="center"
++                android:fontFamily="@font/montserrat_extrabold"
++                android:textColor="#FCE38A"
++                android:textSize="28sp"
++                android:textStyle="bold" />
++
++            <Button
++                android:id="@+id/button"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="FINISH"
++                android:textColor="#FCE38A"
++                android:background="@drawable/roundcorners"
++                android:fontFamily="@font/montserrat_bold"
++                android:textStyle="bold"
++                android:textSize="18sp"
++                android:layout_marginTop="10dp"/>
++        </LinearLayout>
++    </androidx.cardview.widget.CardView>
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appassessment/Result.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appassessment/Result.kt b/app/src/main/java/com/example/appassessment/Result.kt
+new file mode 100644
+--- /dev/null	(date 1673887995686)
++++ b/app/src/main/java/com/example/appassessment/Result.kt	(date 1673887995686)
+@@ -0,0 +1,26 @@
++package com.example.appassessment
++
++import android.content.Intent
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++import android.view.View
++import kotlinx.android.synthetic.main.activity_result.*
++
++class Result : AppCompatActivity() {
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_result)
++        window.decorView.systemUiVisibility= View.SYSTEM_UI_FLAG_FULLSCREEN
++        val userName=intent.getStringExtra(setData.name)
++        val score=intent.getStringExtra(setData.score)
++        val totalQuestion=intent.getStringExtra("total size")
++
++        congo.text="Congratulations!! You've Completed the quiz!"
++        Score.text="${score} / ${totalQuestion}"
++        button.setOnClickListener {
++            startActivity(Intent(this,MainActivity::class.java))
++            finish()
++        }
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_baseline_help_24.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_baseline_help_24.xml b/app/src/main/res/drawable/ic_baseline_help_24.xml
+new file mode 100644
+--- /dev/null	(date 1673880927464)
++++ b/app/src/main/res/drawable/ic_baseline_help_24.xml	(date 1673880927464)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FCE38A"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM13,19h-2v-2h2v2zM15.07,11.25l-0.9,0.92C13.45,12.9 13,13.5 13,15h-2v-0.5c0,-1.1 0.45,-2.1 1.17,-2.83l1.24,-1.26c0.37,-0.36 0.59,-0.86 0.59,-1.41 0,-1.1 -0.9,-2 -2,-2s-2,0.9 -2,2L8,9c0,-2.21 1.79,-4 4,-4s4,1.79 4,4c0,0.88 -0.36,1.68 -0.93,2.25z"/>
++</vector>

@@ -1,0 +1,250 @@
+[
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_genshin_logo.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\genshin_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_selected_question_option.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\selected_question_option.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_melt.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\melt.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_swirl.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\swirl.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\font_montserrat_extrabold.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\font\\montserrat_extrabold.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_burning.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\burning.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_correct_question_option.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\correct_question_option.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_geo.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\geo.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_graident_colors.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\graident_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_activity_question.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\activity_question.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_empty.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\empty.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_roundcorners.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\roundcorners.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_popup_info.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\popup_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_electro.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\electro.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_quickened.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\quickened.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_pyro.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\pyro.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_superconduct.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\superconduct.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_activity_result.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\activity_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_frozen.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\frozen.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_rectangle_shapealt.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\rectangle_shapealt.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_anemo.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\anemo.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_paimon.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\paimon.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_popup_window.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\popup_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_crystallize.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\crystallize.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_hydro.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\hydro.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_genshin_elements.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\genshin_elements.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_cryo.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\cryo.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\font_montserrat_bold.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\font\\montserrat_bold.xml"
+    },
+    {
+        "merged": "com.example.appassessment.app-merged_res-30:/layout_popup_info.xml.flat",
+        "source": "com.example.appassessment.app-main-32:/layout/popup_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_spinner_item.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\spinner_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout-v26_popup_window.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout-v26\\popup_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_wrong_question_option.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\wrong_question_option.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-pngs-25:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_vaporize.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\vaporize.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\font_montserrat_medium.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\font\\montserrat_medium.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_electro_charged.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\electro_charged.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\font_montserrat_semibold.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\font\\montserrat_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_question_option.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\question_option.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_bloom.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\bloom.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_rectangle_shape.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\rectangle_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_overload.gif.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\overload.gif"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable-v24_dendro.png.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable-v24\\dendro.png"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\layout_activity_quiz_home.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\layout\\activity_quiz_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-merged_res-30:\\drawable_ic_baseline_help_24.xml.flat",
+        "source": "C:\\Users\\NJCN\\.gradle\\daemon\\7.4\\com.example.appassessment.app-main-32:\\drawable\\ic_baseline_help_24.xml"
+    }
+]
