@@ -2594,6 +2594,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable kotlin
 drawable logo
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2917,6 +2918,10 @@ id immediateStop
 id included
 id indeterminate
 id info
+id info_desc
+id information
+id instruction
+id instruction_desc
 id invisible
 id inward
 id italic
@@ -3138,9 +3143,10 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
+id textView8
 id text_description
-id text_description1
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

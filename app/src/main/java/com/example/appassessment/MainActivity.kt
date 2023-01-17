@@ -2,6 +2,7 @@ package com.example.appassessment
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,6 +17,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val b1 = findViewById<Button>(R.id.button) // creating a variable name b1 for button
+        val b2 = findViewById<Button>(R.id.button2) // creating a variable name b2 for button
+        val b3 = findViewById<Button>(R.id.button3) // creating a variable name b3 for button
+
+        b2.setOnClickListener {
+            val popup = layoutInflater.inflate(R.layout.popup_info, null)
+
+            val popupWindow = Dialog(this)
+            popupWindow.setContentView(popup)
+
+            popupWindow.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            popupWindow.show()
+
+            val closebtn = popup.findViewById<Button>(R.id.goBack)
+            closebtn.setOnClickListener {
+                popupWindow.dismiss()
+            }
+        }
+
+        b3.setOnClickListener {
+            val Intent = Intent(this,QuizHome::class.java)
+            startActivity(Intent)
+        }
 
         //setting the 1st spinner
         val adapter = ElementAdapter(this, Elements.list!!)

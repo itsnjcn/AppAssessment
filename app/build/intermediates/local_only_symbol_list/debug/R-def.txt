@@ -31,6 +31,7 @@ drawable hydro
 drawable ic_baseline_help_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable kotlin
 drawable logo
 drawable melt
 drawable overload
@@ -61,6 +62,10 @@ id gif_reaction
 id goBack
 id imageView
 id imageView2
+id info_desc
+id information
+id instruction
+id instruction_desc
 id opt_1
 id opt_2
 id opt_3
@@ -76,9 +81,10 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
+id textView8
 id text_description
-id text_description1
 id title_reaction
 id view2
 layout activity_main

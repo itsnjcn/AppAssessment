@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizHome"
+    android:background="@drawable/graident_colors"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="7dp"
+    >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/roundcorners"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/roundcorners"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Go Back"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:gravity="center"
+        android:text="Genshin Quiz"
+        android:textColor="#FCE38A"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="Rules are simple! Answer a total of five questions relating to the Genshin's elements and we'll see whether or not you're that knowledgeable to Genshin Impact or not!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:layout_editor_absoluteX="6dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

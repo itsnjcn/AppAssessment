@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_shape">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="376dp"
+        android:layout_height="626dp"
+        android:text="@string/placeholder_text"
+        android:textColor="#0E5F76"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/info_desc"
+        android:layout_width="327dp"
+        android:layout_height="187dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Genshin Impact Calculator is an app where you can combine two elements and form a reaction based on the game called Genshin Impact. Under no circumstances that this application is affliated to Genshin Impact or HoYoverse."
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:justificationMode="inter_word"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.241"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goBack"
+        android:layout_width="203dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/roundcorners"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/goBack"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="334dp"
+        android:layout_height="74dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:gravity="bottom|start"
+        android:text="Information"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="60sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="334dp"
+        android:layout_height="74dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:gravity="bottom|start"
+        android:text="Instruction"
+        android:textAllCaps="false"
+        android:textColor="#FCE38A"
+        android:textSize="60sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <TextView
+        android:id="@+id/instruction_desc"
+        android:layout_width="327dp"
+        android:layout_height="187dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:justificationMode="inter_word"
+        android:text="In this calculator, you have to choose one of seven elements from two of these dropdowns to see and check whether or not it has an reaction. To start, you can simply tap the dropdown boxes below the text of each element and select which element you want to check. After that, you can tap the button below the dropdown box to see the result."
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.769"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

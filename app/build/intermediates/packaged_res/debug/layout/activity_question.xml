@@ -15,47 +15,45 @@
         android:id="@+id/question_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_extrabold"
         android:gravity="center"
-        android:text="ENTER YOUR QUESTION"
-        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_extrabold"
         android:textColor="#FCE38A"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:text="ENTER YOUR QUESTION"/>
 
     <TextView
-        android:id="@+id/progress_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:padding="5dp"
-        android:text="1/5"
-        android:textColor="#FCE38A"
-        android:textSize="20sp" />
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="1/5"
+            android:textColor="#FCE38A"
+            android:textSize="20sp"
+
+            />
 
     <TextView
         android:id="@+id/opt_1"
         android:layout_width="match_parent"
-        android:fontFamily="@font/montserrat_extrabold"
         android:layout_height="wrap_content"
         android:text="option1"
-
-        android:background="@drawable/rectangle_shapealt"
+        android:fontFamily="@font/montserrat_medium"
+        android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
-        android:textColor="#FCE38A"
         android:gravity="center"/>
 
     <TextView
         android:id="@+id/opt_2"
         android:layout_width="match_parent"
+        android:fontFamily="@font/montserrat_medium"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:background="@drawable/rectangle_shapealt"
+        android:background="@drawable/question_option"
         android:gravity="center"
-        android:textColor="#FCE38A"
         android:padding="10dp"
         android:text="option1"
         android:textSize="18sp" />
@@ -64,27 +62,24 @@
         android:id="@+id/opt_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
         android:text="option1"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:background="@drawable/rectangle_shapealt"
+        android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
-        android:textColor="#FCE38A"
         android:layout_marginTop="20dp"
         android:gravity="center"/>
     <TextView
         android:id="@+id/opt_4"
-        android:fontFamily="@font/montserrat_extrabold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
         android:text="option1"
-        android:background="@drawable/rectangle_shapealt"
+        android:background="@drawable/question_option"
         android:padding="10dp"
         android:textSize="18sp"
-        android:textColor="#FCE38A"
         android:layout_marginTop="20dp"
         android:gravity="center"/>
-
 
     <Button
         android:id="@+id/submit"
@@ -92,10 +87,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/roundcorners"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="@font/montserrat_extrabold"
         android:text="Submit"
-        android:textAllCaps="false"
         android:textColor="#FCE38A"
-        android:textSize="25sp" />
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 </LinearLayout>
