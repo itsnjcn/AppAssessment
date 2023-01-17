@@ -24,7 +24,7 @@
             android:fontFamily="@font/montserrat_extrabold"
 
             android:gravity="center"
-            android:text="Congratulations Name !!"
+            android:text="Congratulations!!"
             android:textColor="#FCE38A"
             android:textSize="30sp"
             android:textStyle="bold" />
